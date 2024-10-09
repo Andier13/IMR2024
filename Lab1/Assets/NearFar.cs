@@ -34,16 +34,15 @@ public class NearFar : MonoBehaviour
                 Debug.Log("Pressed N");
             }
 
-            /*
-             * if (Vector3.Distance(transform.position, otherCharacter.transform.position) <= 0.25)
+            if (Vector3.Distance(transform.position, otherCharacter.transform.position) <= 0.25)
             {
-                animator.SetTrigger("Near");
+                animator.SetBool("IsClose", true);
             }
             else
             {
-                animator.SetTrigger("Far");
+                animator.SetBool("IsClose", false);
             }
-             */
+
         }
     }
 }
