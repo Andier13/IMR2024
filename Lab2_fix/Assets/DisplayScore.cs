@@ -5,8 +5,8 @@ using TMPro;
 
 public class DisplayScore : MonoBehaviour
 {
-    public Transform StartPoint;
-    public Transform Ball;
+    public Transform startPoint;
+    public Transform ball;
     private TextMeshProUGUI textMeshProUGUI;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class DisplayScore : MonoBehaviour
     {
         if (textMeshProUGUI != null)
         {
-            var distance = Vector3.Distance(StartPoint.position, Ball.position);
+            var distance = Vector3.Distance(startPoint.position, ball.position);
             textMeshProUGUI.text = "Score: " + distance.ToString("0.00");
         }   
     }
