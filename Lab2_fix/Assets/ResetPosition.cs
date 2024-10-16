@@ -33,6 +33,7 @@ public class ResetPosition : MonoBehaviour
                 startTime = 0.0f;
                 currentPostion.position = startPoint.position;
                 current_rigidbody.velocity = Vector3.zero;
+                current_rigidbody.angularVelocity = Vector3.zero;
             }
         }
     }
