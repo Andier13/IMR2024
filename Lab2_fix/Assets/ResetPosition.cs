@@ -7,7 +7,7 @@ public class ResetPosition : MonoBehaviour
     private Transform currentPostion;
     private Rigidbody current_rigidbody;
     public Transform startPoint;
-    private float startTime = 0.0f;
+    private float? startTime = null;
     void Start()
     {
         currentPostion = GetComponent<Transform>();
@@ -23,14 +23,14 @@ public class ResetPosition : MonoBehaviour
         var distance = Vector3.Distance(startPoint.position, currentPostion.position);
         if (distance > 0.1f)
         {
-            if (startTime == 0.0f)
+            if (startTime == null)
             {
                 startTime = Time.time;
             }
 
             if (Time.time - startTime >= 5.0f)
             {
-                startTime = 0.0f;
+                startTime = null;
                 currentPostion.position = startPoint.position;
                 current_rigidbody.velocity = Vector3.zero;
                 current_rigidbody.angularVelocity = Vector3.zero;
